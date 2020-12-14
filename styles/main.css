@@ -15,7 +15,9 @@ h1, h2, h3, h4, h5, h6, a, p, li {
 }
 
 .container {
-    width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+    max-width: 1140px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -125,7 +127,7 @@ header {
 .section1 {
     display: flex;
     background: url(../images/2.section1_back.svg);
-    
+    width: 100%;
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y:  top;
@@ -138,7 +140,7 @@ header {
 .section1_inner {
     margin-top: 90px;
     display: flex;
-    
+    width: 100%;
     justify-content: space-between;
     
 }
@@ -518,7 +520,23 @@ footer {
 }
 
 .menu_mobile {
-    display: none;
+    top: -100px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    transform: scale(1);
+    margin-left: auto;
+    margin-right: auto;
+    transition: all ease 0.5s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    transition: all ease 0.3s;
+    background-color: #ffffff;
+    padding: 22px 0;
+    z-index: 2;
 }
 
 .show {
@@ -537,7 +555,7 @@ footer {
     width: 85%;
     background-color: #ffffff;
     padding: 22px 0;
-    z-index: 2;
+    z-index: 1000;
 }
 
 .show a {
@@ -550,6 +568,7 @@ footer {
     text-align: center;
     letter-spacing: -0.138462px;
     color: #2D314D;
+    z-index: 2000;
 
 }
 
@@ -569,17 +588,18 @@ footer {
 
 @media only screen and (max-width: 576px) {
     .container {
-        max-width: 540px;
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
         
     }
 
     
     .header_inner {
+        width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        max-width: 540px;
-        padding: 22PX;
+        justify-content: space-between;        
          position: relative;
     }
 
@@ -589,7 +609,8 @@ footer {
     }
 
     header {
-         padding: 0 20px;
+         padding: 22px 0;
+         width: 100%;
          
 
     }
@@ -601,18 +622,19 @@ footer {
 
     .burger_holder {
         display: block;
+        right: 15px;
+        position: relative;
         
-        position: absolute;
-        right: 140px;
     }
 
     
 
     .section1 {
         background: url(../images/mobile_back.svg);
-        
+        width: 100%;
         background-repeat: no-repeat;
         background-size: cover;
+        position: relative;
         
         
     }
@@ -621,6 +643,7 @@ footer {
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
+        width: 100%;
     }
 
     .section1_right {
@@ -631,7 +654,7 @@ footer {
     .section_right_mobile {
         display: flex;
         width: 102%;
-        margin-top: 80px;
+        
     }
 
     .section_right_mobile img{
@@ -643,6 +666,7 @@ footer {
     
     .section2 {
         margin-top: 250px;
+        width: 100%;
     }
     .section1_left {
             width: 100%;
@@ -656,6 +680,7 @@ footer {
 
     .section1_left h1{
             margin: 0;
+            width: 100%;
     }
 
     .section1_left p{
@@ -706,6 +731,8 @@ footer {
     .section3_blocks {
         margin-top: 24px;
     }
+
+    
 
     .footer_left {
         flex-direction: column;
